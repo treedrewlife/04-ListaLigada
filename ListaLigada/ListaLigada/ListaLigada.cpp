@@ -128,10 +128,16 @@ void inserirElemento()
 	cin >> novo->valor;
 	novo->prox = NULL;
 
+	if (posicaoElemento(novo->valor) != NULL){
+		cout << "Numero duplicado, tente novamente \n";
+		return;
+	}
+
 	if (primeiro == NULL)
 	{
 		primeiro = novo;
 	}
+
 	else
 	{
 		// procura o final da lista
@@ -150,8 +156,34 @@ void excluirElemento()
 
 void buscarElemento()
 {
+	NO* aux = primeiro;
+	int numero = 0;
 	
-}
+	cout << "encontre seu numero aqui! gratis \n";
+	cin >> numero;
+
+	if (aux == NULL) {
+		cout << "nao tem nada aqui \n";
+		return;
+	}
+
+	if (numero != NULL) {
+
+		while (aux != NULL) {
+			if (aux == aux) {
+				cout << "achou seu numero \n";
+				return;
+
+			}
+			aux = aux->prox;
+		}
+	}
+	else {
+		cout << "nao tem esse numero na lista \n";
+		return;
+	}
+	
+} 
 
 
 
