@@ -167,21 +167,15 @@ void buscarElemento()
 		return;
 	}
 
-	if (numero != NULL) {
-
 		while (aux != NULL) {
-			if (aux == aux) {
+			if (aux->valor == numero) {
 				cout << "achou seu numero \n";
 				return;
-
 			}
 			aux = aux->prox;
 		}
-	}
-	else {
-		cout << "nao tem esse numero na lista \n";
-		return;
-	}
+	
+		cout << "nada encontrado \n";
 	
 } 
 
